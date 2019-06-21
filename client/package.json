@@ -4,14 +4,10 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
-<<<<<<< HEAD
+    "axios": "^0.19.0",
     "react": "^16.8.6",
     "react-dom": "^16.6.3",
     "react-router-dom": "^5.0.1",
-=======
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
->>>>>>> master
     "react-scripts": "^2.1.1"
   },
   "scripts": {
@@ -19,7 +15,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-<<<<<<< HEAD
   },
   "browserslist": [
     ">0.2%",
@@ -27,7 +22,4 @@
     "not ie <= 11",
     "not op_mini all"
   ]
-=======
-  }
->>>>>>> master
 }
