@@ -9,9 +9,7 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +24,14 @@
   "engines": {
     "npm": "6.4.1",
     "node": "10.15.3"
-
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FizzyMo/Final-PROJECT.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/FizzyMo/Final-PROJECT/issues"
+  },
+  "homepage": "https://github.com/FizzyMo/Final-PROJECT#readme"
 }
