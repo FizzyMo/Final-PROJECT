@@ -22,22 +22,23 @@ class Home extends React.Component{
         return axios.get('https://newsapi.org/v2/everything?domains=wsj.com,nytimes.com&apiKey=496e966f5c324e3080abd07b9111c5c3');
      };
 
-      render(){
+     render(){
         return (
             <div className="ui raised very padded text container segment">
-        <p>
-        Yo!
-        
-         {this.state.articles[0] ? this.state.articles[0].author : ''}
-        
-        </p>
-        
+    
+            <ul>
+                { this.state.articles.slice(0,1).map((article, index) => {
+                    return (<li key={index}>
+                    <h2>{ article.name }</h2>
+                    <div>{ article.author }</div>
+                    <p>{ article.content }</p>
+                    <a href={article.url}>{ article.url }</a>
+                   </li> )
+                })}
+            </ul>
         </div>
         );
-
-      }
-
-}
+      }}
 
 
 export default Home;
