@@ -19,7 +19,7 @@ class Home extends React.Component{
     }
 
     getArticles(){
-        return axios.get('https://newsapi.org/v2/everything?domains=wsj.com,nytimes.com&apiKey=496e966f5c324e3080abd07b9111c5c3');
+        return axios.get('https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=496e966f5c324e3080abd07b9111c5c3');
      };
 
      render(){
@@ -29,8 +29,9 @@ class Home extends React.Component{
             <ul>
                 { this.state.articles.slice(0,1).map((article, index) => {
                     return (<li key={index}>
-                    <h2>{ article.name }</h2>
-                    <div>{ article.author }</div>
+                    <h2>Title<br></br>{ article.title }</h2>
+                    <div> Author: { article.author }</div>
+                    <br></br>
                     <p>{ article.content }</p>
                     <a href={article.url}>{ article.url }</a>
                    </li> )
