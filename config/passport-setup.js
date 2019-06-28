@@ -31,7 +31,7 @@ passport.use(
                 new User({
                     googleId: profile.id,
                     username: profile.displayName,
-                    thumbnail: profile._json.image.url,
+                    thumbnail: profile._json.picture,
                     newsSources: [],
                     newsKeywords: []
                 }).save().then((newUser) => {
