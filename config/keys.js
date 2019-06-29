@@ -2,8 +2,7 @@
 
 
 
-console.log(process.env);
-console.log(process.CLIENTID);
+
 
 module.exports = {
     google:{
