@@ -1,6 +1,5 @@
 import React from "react";
 
-console.log(this);
 
 
 function Profile() {

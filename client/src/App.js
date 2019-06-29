@@ -14,10 +14,12 @@ function App() {
   return (
     <Router>
       <div>
+
             <i className="home icon">
             <Link to="/Home">Home</Link>
             </i>
             <i className="question circle icon">
+
           <Link to= "/about">About</Link>
             </i>
          
