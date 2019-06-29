@@ -73,6 +73,7 @@ class Home extends React.Component{
                    </li> )
                 })}
             </ul>
+            
         </div>
        </>
         );
