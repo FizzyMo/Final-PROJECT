@@ -43,7 +43,7 @@ function App() {
         </div>
         
 
-        <Route exact path="/" component={AboutLogin} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/aboutlogin" component={AboutLogin} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/about" component={About} />
