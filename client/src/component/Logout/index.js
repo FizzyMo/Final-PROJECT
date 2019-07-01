@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 
 class Logout extends React.Component {
     constructor(props) {
