@@ -1,9 +1,17 @@
 .footer {
-    position: fixed;
+  position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 60px;
     text-align: center;
     background-color: antiquewhite;
+}
+
+.ui.github.button {
+  float: right;
+}
+
+a, i {
+  padding: 4%;
+  color: black;
 }
