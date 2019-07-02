@@ -41,6 +41,7 @@ function App() {
             <div class="ui button">Go</div>
           </div>
         </div>
+        <br></br>
         
 
         <Route exact path="/" component={Home} />
