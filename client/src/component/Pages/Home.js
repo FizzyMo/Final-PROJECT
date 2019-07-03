@@ -1,46 +1,84 @@
 import React from "react";
 import axios from "axios";
 import Moment from 'react-moment';
+const API_URL = 'https://newsapi.org/v2/top-headlines?sources&';
+const c = API_URL + '&apiKey=' + process.env.REACT_APP_API_KEY;
+var timeout = null;
 
 class Home extends React.Component {
+    constructor(props) {
+        super(props);
+        this.getArticles = this.getArticles.bind(this);
 
-    constructor() {
-        super();
+
         this.state = {
-            articles: []
+            articles: [],
+            query: '',
         }
     }
 
     componentDidMount() {
-        this.getArticles().then(res => {
-            console.log(res);
-            this.setState({ articles: res.data.articles });
-        });
+
     }
 
-    //     url = ('https://newsapi.org/v2/top-headlines?q=' + ','.join(keywords)) + '&language=en' + '&apiKey=' + api_key + '&pageSize=100'
+    getArticles = e => {
+        if (e) {
+            e.preventDefault();
+        }
+        if (this.state.query !== "") {
+            axios.get(API_URL + "q=" + this.state.query + '&apiKey=' + process.env.REACT_APP_API_KEY)
+                .then((data) => {
+                    console.log("HAEY!");
+                    console.log(data);
+                    this.setState({
+                        articles: data.data.articles
 
-    // response = requests.get(url)
 
-    // for article in response.json()['articles']:
-    //     print(article['title'])
+                    })
+                })
+                .catch((err) => {
+                    console.log("BORKED");
+                    console.log(err);
 
-    // print(url)
+                })
+        }
 
-    // print(response.json()['totalResults'])
-    keywords = ["trump", "bitcoin"];
-
-    getArticles() {
-        return axios.get('https://newsapi.org/v2/top-headlines?sources=google-news&apiKey=496e966f5c324e3080abd07b9111c5c3');
     };
+
+
+    handleInputChange = e => {
+        this.setState({
+            query: e.target.value,
+
+
+        }
+
+        )
+    }
 
     render() {
         return (
+            <>
+            <div className="menu item">
+                <div class= "ui action input">
+        <form
+	    onSubmit={this.getArticles}>
+            
+          <input type="text"
+            placeholder="Search for some shit"
+            
+            ref={input => this.search = input}
+            onChange={this.handleInputChange}
+          />
+        </form>
+        </div>
+        </div>
+    
             <div style={{ background: 'wheat' }}>
                 <br></br>
                 <div className="ui raised very padded text container segment">
-                    {this.state.articles.slice(0, 1).map((article, index) => {
-                        return (<ul key={index}>
+                    {this.state.articles.slice(0).map((article, index) => {
+                        return (<ul key={article.publishedAt}>
                             <div className='content'>
                                 <div className='header'>
                                     <h2>{article.title}</h2>
@@ -58,6 +96,7 @@ class Home extends React.Component {
                 </div>
                 <br></br>
             </div>
+            </>
         );
     }
 }

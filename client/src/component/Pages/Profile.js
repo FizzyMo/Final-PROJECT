@@ -98,12 +98,7 @@ class Profile extends React.Component {
                 SUBMIT
             </button>
 
-
-
         </div>
-
-
-
 
         //    )};
     }

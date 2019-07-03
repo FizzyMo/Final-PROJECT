@@ -35,12 +35,12 @@ function App() {
           </a>
         </div>
 
-        <div className="menu item">
+        {/* <div className="menu item">
           <div class="ui action input">
             <input type="text" placeholder="Keyword Search"></input>
             <div class="ui button">Go</div>
           </div>
-        </div>
+        </div> */}
         <br></br>
         
 
