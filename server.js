@@ -41,7 +41,7 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://react-app:UABootcamp@newsapp-krufv.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/passportpractice3");
 
 
 

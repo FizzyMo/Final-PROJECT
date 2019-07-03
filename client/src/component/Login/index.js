@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 
 class Login extends React.Component {
@@ -8,9 +9,11 @@ class Login extends React.Component {
     }
     handleClick(){
         console.log('CLICKED');
+        axios.get("/auth/google");
+
     }
     render(){
-        return  (<a href="http://localhost:3001/auth/google" class="button">
+        return  (<a href="#" class="button" onClick={this.handleClick}>
         <div>
           <span class="svgIcon t-popup-svg">
             <svg

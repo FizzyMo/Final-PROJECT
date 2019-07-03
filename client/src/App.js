@@ -7,8 +7,12 @@ import About from "./component/Pages/About";
 import Login from "./component/Login/index";
 import Logout from "./component/Logout/index";
 import Profile from "./component/Pages/Profile";
+import axios from "axios";
 
 function App() {
+
+  axios.get("/api/user").then(result => console.log(result));
+
   return (
     <Router>
       <div>
