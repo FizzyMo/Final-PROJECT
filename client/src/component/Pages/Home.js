@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Moment from 'react-moment';
-const API_URL = 'https://newsapi.org/v2/top-headlines?sources&';
+const API_URL = 'https://newsapi.org/v2/everything?language=en&';
 const c = API_URL + '&apiKey=' + process.env.REACT_APP_API_KEY;
 
 

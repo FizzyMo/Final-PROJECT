@@ -41,7 +41,7 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/passportpractice3");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/passportpractice20");
 
 // set up routes
 app.use('/api', apiRoutes);
