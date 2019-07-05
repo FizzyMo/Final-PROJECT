@@ -11,7 +11,7 @@ import Profile from "./component/Pages/Profile";
 function App() {
   return (
     <Router>
-      <div>
+      <div >
         <div className="ui menu">
 
           <div className="header item">
@@ -34,13 +34,6 @@ function App() {
             <Link to="/about"><i class="question circle icon"></i> About</Link>
           </a>
         </div>
-
-        {/* <div className="menu item">
-          <div class="ui action input">
-            <input type="text" placeholder="Keyword Search"></input>
-            <div class="ui button">Go</div>
-          </div>
-        </div> */}
         <br></br>
         
 
