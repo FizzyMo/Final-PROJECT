@@ -34,31 +34,37 @@ class Profile extends React.Component {
         return <div>
             <h2>Welcome to your profile</h2>
             <h2> {this.state.person.username} </h2>
-            
+
             <hr></hr>
             <h2>Which Topics Would You Like to Read About?</h2>
             <div>
                 <button class="ui grey button">Politics</button>
                 <button class="ui grey button">Finance</button>
                 <button class="ui grey button">Business</button>
-                <button class="ui grey button">Entertainment</button>
+                <button class="ui grey button">Health</button>
+                <button class="ui grey button">Travel</button>
+
             </div>
             <br></br>
             <div>
-                <button class="ui grey button">Celebrities</button>
                 <button class="ui grey button">Technology</button>
                 <button class="ui grey button">Education</button>
                 <button class="ui grey button">Weather</button>
+                <button class="ui grey button">Science</button>
+                <button class="ui grey button">Environment</button>
             </div>
             <br></br>
             <div>
-                <button class="ui grey button">Environment</button>
-                <button class="ui grey button">Travel</button>
+                <button class="ui grey button">Entertainment</button>
+                <button class="ui grey button">Celebrities</button>
                 <button class="ui grey button">Fashion</button>
                 <button class="ui grey button">Movies</button>
+                <button class="ui grey button">Music</button>
+
             </div>
             <br></br>
             <div>
+                <button class="ui grey button">Sports</button>
                 <button class="ui grey button">Football</button>
                 <button class="ui grey button">Basketball</button>
                 <button class="ui grey button">Baseball</button>
