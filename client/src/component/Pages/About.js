@@ -10,45 +10,45 @@ function About() {
 
                 <div class="row">
                     <div class="three wide column">
-                        <img src='https://via.placeholder.com/150.png/09f/fff' />
+                        <img style={{ width: '150px', height: '150px'}} src='https://fizzymo.github.io/Responsive-Portfolio/assets/images/DSC_00384.jpg' />
                     </div>
 
                     <div style={{ textAlign: 'center', backgroundImage: 'src=' }} class="ten wide column">
-                        <h1>Title</h1>
-                        <h2>Subheading</h2>
-                        <h3><em>"Slogan..."</em></h3>
+                        <h1>NEWS GLEAN</h1>
+                        <h2>Project 3 - UA Coding Bootcamp (Jan 2019 Cohort)</h2>
+                        <h3><em>"Dynamic news filtering for today's world!"</em></h3>
                     </div>
 
                     <div class="three wide column">
-                        <img style={{ float: 'right' }} src='https://via.placeholder.com/150.png/09f/fff' />
+                        <img style={{ float: 'right', width: '150px', height: '150px' }} src='https://salt.arizona.edu/sites/salt.arizona.edu/files/styles/profile_full/public/profiles/Max%20Color.jpg?itok=X8c1PxmS' />
                     </div>
 
                 </div>
 
                 <div class="row">
                     <div class="three wide column">
-                        <img src='https://via.placeholder.com/150.png/09f/fff' />
+                        <img style={{ width: '150px', height: '150px'}} src='https://ryangrady311.github.io/Bootstrap-Portfolio/assets/images/Graduation_Union_Cropped.jpeg' />
                     </div>
 
                     <div class="ten wide column">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Nunc sed velit dignissim sodales ut eu. aliquet porttitor lacus luctus.</p>
+                        <p>Welcome to News Glean.  This is a dynamic application that is designed to filter the news by the keywords of your choice.  It will literally change how you consume news.  You can even setup your own profile!</p>
 
-                        <p>Tempus iaculis urna id volutpat. Massa ultricies mi quis hendrerit. Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Neque aliquam vestibulum morbi blandit cursus risus at. Elementum nibh tellus molestie nunc non. In nibh mauris cursus mattis molestie a iaculis at erat. Mattis vulputate enim nulla aliquet porttitor lacus luctus.</p>
+                        <p>News Glean is the brainchild of a dynamic team of web developers from the University of Arizona, Carisa Sanez-Videtto, Ryan Grady, and Max Jackson.  Carsia, Ryan, and Max are web developers in the making who will graduate from the university’s Coding Boot Camp in July, 2019.</p>
 
                         <div class="ui segment">
                             <div class="ui two column very relaxed grid">
                                 <div class="column">
 
-                                    <p>Tempus iaculis urna id volutpat. Massa ultricies mi quis hendrerit.</p>
-                                    <p>Placerat duis ultricies lacus sed turpis tincidunt id aliquet risus. Neque aliquam vestibulum morbi blandit cursus risus at.</p>
-                                    <p>Elementum nibh tellus molestie nunc non. In nibh mauris cursus mattis molestie a iaculis at erat. Mattis vulputate enim nulla aliquet porttitor lacus luctus.</p>
+                                    <p>The team has harnessed the power of a dynamic technology framework, React and it skyrockets into production with a Mongo database.  .</p>
+                                    <p>Finally, with help from ‘NewsApi.org’ our application will render a dynamic list of articles from a balanced journalistic source. </p>
+
 
                                 </div>
 
                                 <div class="column">
-                                    <p> In nibh mauris cursus mattis molestie a iaculis at erat. Mattis vulputate enim nulla aliquet porttitor lacus luctus.</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui faucibus in ornare quam viverra orci sagittis eu volutpat.</p>
-                                    <p>Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Nunc sed velit dignissim sodales ut eu. aliquet porttitor lacus luctus.</p>
+                                    <p>News Glean utilizes a user-friendly front end design that is modern, sleek and mobile friendly.</p>
+                                    <p>The styling package of Semantic makes this possible due to it's </p>
+                                    <p>Semantic UI treats words and classes as exchangeable concepts. Classes use syntax from natural languages like noun/modifier relationships, word order, to link concepts intuitively.</p>
                                 </div>
 
                             </div>
@@ -61,9 +61,9 @@ function About() {
                     </div>
 
                     <div class="three wide column">
-                        <img style={{ float: 'right', }} src='https://via.placeholder.com/150.png/09f/fff' />
+                        <img style={{ float: 'right', width: '150px', height: '150px'}} src='https://bit.ly/fcc-relaxing-cat' />
                     </div>
-                    
+
                 </div>
 
             </div>
