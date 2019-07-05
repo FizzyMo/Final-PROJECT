@@ -34,37 +34,9 @@ class Profile extends React.Component {
         return <div>
             <h2>Welcome to your profile</h2>
             <h2> {this.state.person.username} </h2>
-            <h2>Select Your News Sources</h2>
-            <div>
-                <button class="ui grey button">CNN</button>
-                <button class="ui grey button">New York Times</button>
-                <button class="ui grey button">Fox News</button>
-                <button class="ui grey button">Huffington Post</button>
-            </div>
-            <br></br>
-            <div>
-                <button class="ui grey button">USA Today</button>
-                <button class="ui grey button">Reuters » U.S. News</button>
-                <button class="ui grey button">POLITICO</button>
-                <button class="ui grey button">ABC News</button>
-            </div>
-            <br></br>
-            <div>
-                <button class="ui grey button">Reddit</button>
-                <button class="ui grey button">MSNBC</button>
-                <button class="ui grey button">CBS News</button>
-                <button class="ui grey button">Newsweek</button>
-            </div>
-            <br></br>
-            <div>
-                <button class="ui grey button">National Geographic</button>
-                <button class="ui grey button">Fox Sports</button>
-                <button class="ui grey button">Axios</button>
-                <button class="ui grey button">BBC News</button>
-            </div>
-            <br></br>
+            
             <hr></hr>
-            <h2>Select Your News Topics</h2>
+            <h2>Which Topics Would You Like to Read About?</h2>
             <div>
                 <button class="ui grey button">Politics</button>
                 <button class="ui grey button">Finance</button>

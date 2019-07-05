@@ -19,7 +19,7 @@ function App() {
           </div>
 
           <a className="item">
-            <Link to="/Profile"><i class="user icon"></i> Profile</Link>
+            <Link to="/Profile"><i class="user icon"></i> Create Your Account</Link>
           </a>
 
           <a className="item">
