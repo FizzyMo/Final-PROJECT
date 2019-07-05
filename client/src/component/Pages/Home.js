@@ -60,7 +60,6 @@ class Home extends React.Component {
 		return (
 			<>
 				<div class="ui menu" style={{ marginLeft: '10px', width: '16%' }}>
-					<div className="item">
 						<div className="ui action input">
 
 							<form
@@ -71,10 +70,14 @@ class Home extends React.Component {
 									ref={input => this.search = input}
 									onChange={this.handleInputChange}
 								/>
+							<button
+							type = "submit"
+							className="btn"> Search
+
+							</button>
 							</form>
 
 						</div>
-					</div>
 				</div>
 
 				<div style={{ background: 'wheat' }}>
