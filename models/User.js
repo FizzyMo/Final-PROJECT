@@ -19,7 +19,10 @@ const UserSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  newsKeywords: Array
+  useremotion: {
+    type: String,
+    required: true
+  }
 });
 
 module.exports = User = mongoose.model("users", UserSchema);
