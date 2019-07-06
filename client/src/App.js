@@ -11,31 +11,26 @@ import Profile from "./component/Pages/Profile";
 function App() {
   return (
     <Router>
-      <div >
-        <div className="ui menu">
+      <div className='ui inverted vertical masthead left aligned segment' >
+        <div className="ui compact menu" style={{ backgroundColor: 'wheat' }}>
 
           <div className="header item">
-            <Link to="/Home"><i class="home icon"></i> Home</Link>
+            <Link to="/Home"><i class="home icon"></i>Home</Link>
           </div>
 
           <a className="item">
-            <Link to="/Profile"><i class="user icon"></i> Create Your Account</Link>
+            <Link to="/Profile"><i class="user icon"></i>Account</Link>
           </a>
 
           <a className="item">
-            <Link to="/Login"><i class="sign-in icon"></i> Sign In</Link>
+            <Link to="/Login"><i class="sign-in icon"></i>Login</Link>
           </a>
 
           <a className="item">
-            <Link to="/Logout"><i class="sign-out icon"></i> Sign Out</Link>
+            <Link to="/Logout"><i class="sign-out icon"></i>Logout</Link>
           </a>
 
-          <a className="item">
-            <Link to="/about"><i class="question circle icon"></i> About</Link>
-          </a>
         </div>
-        <br></br>
-        
 
         <Route exact path="/" component={Home} />
         <Route exact path="/aboutlogin" component={AboutLogin} />
@@ -45,9 +40,14 @@ function App() {
         <Route exact path="/Logout" component={Logout} />
         <Route exact path="/Profile" component={Profile} />
       </div>
-
+      <div className='ui inverted vertical masthead left aligned segment' >
+        <a className="item">
+          <Link to="/about"><i class="question circle icon"></i>Learn About News Glean</Link>
+        </a>
+      </div>
       <Footer>
       </Footer>
+
     </Router>
   );
 }

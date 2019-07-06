@@ -4,13 +4,10 @@ import Moment from 'react-moment';
 const API_URL = 'https://newsapi.org/v2/everything?language=en&sortBy=publishedAt&';
 const c = API_URL + '&apiKey=' + process.env.REACT_APP_API_KEY;
 
-
 class Home extends React.Component {
 	constructor(props) {
 		super(props);
 		this.getArticles = this.getArticles.bind(this);
-
-
 		this.state = {
 			articles: [],
 			query: '',
@@ -45,12 +42,9 @@ class Home extends React.Component {
 
 	};
 
-
 	handleInputChange = e => {
 		this.setState({
 			query: e.target.value,
-
-
 		}
 
 		)
@@ -59,73 +53,72 @@ class Home extends React.Component {
 	render() {
 		return (
 			<>
-				<div class="ui menu" style={{ marginLeft: '10px', width: '16%' }}>
-						<div className="ui action input">
-
-							<form
-								onSubmit={this.getArticles}>
-								<input type="text"
-									placeholder=" Let's read the news..."
-
-									ref={input => this.search = input}
-									onChange={this.handleInputChange}
-								/>
-							<button
-							type = "submit"
-							className="btn"> Search
-
-							</button>
-							</form>
-
-						</div>
-				</div>
-
-				<div style={{ background: 'wheat' }}>
-
+				<div style={{ background: 'black' }}>
 					<div className='.ui.container'>
 						<div className='ui inverted vertical masthead center aligned segment'>
-							<br />
+							<hr />
 							<h1>NEWS <i class="small newspaper outline icon"></i> GLEAN</h1>
 							<h2>The news your way, all the time!</h2>
 							<h2>Now you can filter the news by the topic you want.</h2>
-							<br />
-							<h2>Just enter a keyword above to retrive articles from a balanced array of sources.</h2>
-							<br />
+							<h2>Just enter a keyword below to retrive articles from a balanced array of news sources.</h2>
+							<br></br>
+							<div className="ui large action input">
+
+								<form className="ui input"
+									onSubmit={this.getArticles}>
+									<input type="text"
+										placeholder=" Let's read the news..."
+
+										ref={input => this.search = input}
+										onChange={this.handleInputChange}
+									/>
+									<button style={{ marginLeft: '2%' }}
+										type="submit"
+										className="ui inverted grey button"> Search
+
+									</button>
+
+								</form>
+
+							</div>
 						</div>
 					</div>
 
-					<div className='container segment' style={{ width: '97%', padding: '10px' }}>
+					<div className='container segment' style={{ width: '97%' }}>
 
 						{this.state.articles.slice(0).map((article, index) => {
 							return (
+
 								<ul key={article.publishedAt}>
 
-									<div className='ui card' style={{ width: '100%', padding: '5px' }} >
-										<div className='content' style={{ background: 'linear-gradient(to right, white, lightblue)', borderBottom: '1px solid grey' }}>
-											<h2 className='header'>{article.title}</h2>
+									<div className='ui card' style={{ width: '100%', padding: '1px' }} >
+										<div className='content' style={{ background: 'linear-gradient(to left, white, wheat)', borderBottom: '1px solid grey' }}>
+											<div className='header'><h2>{article.title}</h2></div>
 										</div>
 										<div className='content'>
-											<div class="ui sub header">Author ({article.author})</div>
+											<div class="ui sub header"><h5>Author ({article.author})</h5></div>
 										</div>
-										<h4>{article.content}</h4>
+										<div style={{ padding: '15px' }}><h4>{article.content}</h4></div>
 										<br />
-										<div class="ui bottom attached button">
-											<a target='_blank' href={article.url}><i class=" large newspaper icon"></i>| View Article </a>
+										<div class="ui light gray bottom attached button" style={{ borderTop: '1px solid grey' }}>
+											<a style={{ float: 'left' }} target='_blank' href={article.url}><h3><i class=" large newspaper icon"></i>| View Article</h3></a>
 											<Moment format='MMMM D, YYYY (h:mm A)' style={{ float: 'right' }}>{article.publishedAt}</Moment>
 										</div>
 									</div>
 
 								</ul>)
-
 						})}
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
 					</div>
-					<br />
-
 				</div>
 			</>
 		);
 	}
 }
-
 
 export default Home;
