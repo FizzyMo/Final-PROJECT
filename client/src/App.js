@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { Link, BrowserRouter as Router, Route } from "react-router-dom";
+import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+//window.location.reload();
 
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
+import redirect from "./utils/redirect";
 
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
@@ -13,7 +15,6 @@ import store from "./store";
 
 import Footer from "./component/Footer/index";
 import Home from "./component/Pages/Home";
-import AboutLogin from "./component/Pages/AboutLogin";
 import About from "./component/Pages/About";
 import Profile from "./component/Pages/Profile";
 
@@ -28,7 +29,7 @@ import Landing from "./component/layout/Landing";
 import Register from "./component/auth/Register";
 import Login from "./component/auth/Login";
 import PrivateRoute from "./component/private-route/PrivateRoute";
-import Dashboard from "./component/dashboard/Dashboard";
+import Logout from "./component/Logout/Logout";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -50,6 +51,9 @@ if (localStorage.jwtToken) {
   }
 }
 
+
+
+
 //end of authentication code
 
 class App extends Component {
@@ -61,31 +65,35 @@ class App extends Component {
         <div className="ui compact menu" style={{ backgroundColor: 'wheat' }}>
 
           <div className="header item">
-            <Link to="/Home"><i class="home icon"></i>Home</Link>
+            <Link to="/home"><i class="home icon" ></i>Home</Link>
           </div>
 
           <a className="item">
-            <Link to="/Profile"><i class="user icon"></i>Account</Link>
+            <Link to="/home"><i class="refresh icon" onClick= {this._refreshPage}></i>Refresh Page</Link>
           </a>
 
           <a className="item">
-            <Link to="/Login"><i class="sign-in icon"></i>Login</Link>
+            <Link to="/login"><i class="sign-in icon"></i>Login</Link>
           </a>
 
           <a className="item">
-            <Link to="/Logout"><i class="sign-out icon"></i>Logout</Link>
+            <Link to="/logout"><i class="sign-out icon"></i>Logout</Link>
           </a>
 
         </div>
-
-        <Route exact path="/" component={Home} />
-        <Route exact path="/aboutlogin" component={AboutLogin} />
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/Profile" component={Profile} />
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={redirect} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/profile" component={Profile} />
+        {/* <Route exact path="/" component={Landing} /> */}
+        <Route exact path="/register" component={Register} />
+      
+         <Switch>
+              <PrivateRoute exact path="/logout" component={Logout} />
+            </Switch>
+            <Switch>
+              <PrivateRoute exact path="/home" component={Home} />
+            </Switch>
       </div>
       <div className='ui inverted vertical masthead left aligned segment' >
         <a className="item">
@@ -99,5 +107,13 @@ class App extends Component {
     </Provider>
   );
 }
+_refreshPage() {
+
+  //ADD IF STATEMENT TO MAKE SURE USER IS LOGGED IN!!!
+  console.log("refreshed!!!")
+  window.location.reload();
+}
+
+
 }
 export default App;

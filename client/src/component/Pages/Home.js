@@ -1,10 +1,15 @@
 import React from "react";
 import axios from "axios";
 import Moment from 'react-moment';
+
+
+
 const API_URL = 'https://newsapi.org/v2/everything?language=en&sortBy=publishedAt&';
 const c = API_URL + '&apiKey=' + process.env.REACT_APP_API_KEY;
 
 class Home extends React.Component {
+
+
 	constructor(props) {
 		super(props);
 		this.getArticles = this.getArticles.bind(this);
@@ -15,16 +20,17 @@ class Home extends React.Component {
 	}
 
 	componentDidMount() {
-
+		
 	}
 
 	getArticles = e => {
-
+		
 		if (e) {
 			e.preventDefault();
 		}
 
 		if (this.state.query !== "") {
+			
 			axios.get(API_URL + "q=" + this.state.query + '&apiKey=' + process.env.REACT_APP_API_KEY)
 				.then((data) => {
 					console.log("HAEY!");
@@ -43,6 +49,7 @@ class Home extends React.Component {
 	};
 
 	handleInputChange = e => {
+		
 		this.setState({
 			query: e.target.value,
 		}
@@ -51,6 +58,7 @@ class Home extends React.Component {
 	}
 
 	render() {
+		
 		return (
 			<>
 				<div style={{ background: 'black' }}>
@@ -119,6 +127,8 @@ class Home extends React.Component {
 			</>
 		);
 	}
+	
 }
+
 
 export default Home;

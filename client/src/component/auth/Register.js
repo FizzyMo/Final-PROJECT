@@ -56,10 +56,7 @@ class Register extends Component {
       <div className="container">
         <div className="row">
           <div className="col s8 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to
-              home
-            </Link>
+           <h1>Add blurb about registering here</h1>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
               <h4>
                 <b>Register</b> below
@@ -125,6 +122,7 @@ class Register extends Component {
                 <label htmlFor="password2">Confirm Password</label>
                 <span className="red-text">{errors.password2}</span>
               </div>
+              <h3>Add Dropdown Here</h3>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
                   style={{
