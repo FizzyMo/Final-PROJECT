@@ -13,6 +13,7 @@ class Register extends Component {
       email: "",
       password: "",
       password2: "",
+      emotion: "",
       errors: {}
     };
   }
@@ -43,7 +44,8 @@ class Register extends Component {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
-      password2: this.state.password2
+      password2: this.state.password2,
+      emotion: this.state.emotion
     };
 
     this.props.registerUser(newUser, this.props.history);
@@ -53,100 +55,108 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col s8 offset-s2">
-            <h1>Add blurb about registering here</h1>
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
-                <b>Register</b> below
-              </h4>
-              <p className="grey-text text-darken-1">
-                Already have an account? <Link to="/login">Log in</Link>
-              </p>
-            </div>
-            <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.name}
-                  error={errors.name}
-                  id="name"
-                  type="text"
-                  className={classnames("", {
-                    invalid: errors.name
-                  })}
-                />
-                <label htmlFor="name">Name</label>
-                <span className="red-text">{errors.name}</span>
-              </div>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.email}
-                  error={errors.email}
-                  id="email"
-                  type="email"
-                  className={classnames("", {
-                    invalid: errors.email
-                  })}
-                />
-                <label htmlFor="email">Email</label>
-                <span className="red-text">{errors.email}</span>
-              </div>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password}
-                  error={errors.password}
-                  id="password"
-                  type="password"
-                  className={classnames("", {
-                    invalid: errors.password
-                  })}
-                />
-                <label htmlFor="password">Password</label>
-                <span className="red-text">{errors.password}</span>
-              </div>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password2}
-                  error={errors.password2}
-                  id="password2"
-                  type="password"
-                  className={classnames("", {
-                    invalid: errors.password2
-                  })}
-                />
-                <label htmlFor="password2">Confirm Password</label>
-                <span className="red-text">{errors.password2}</span>
-              </div>
+      <div className="ui raised very padded text container segment" style={{ background: 'linear-gradient(to left, white, wheat' }}>
+
+        <h2><i class="users icon"></i> Please regsiter for a News Glean account and login</h2>
+        <hr />
+
+        <div style={{ paddingLeft: '11.250px' }}>
+          <h4>REGISTRATION FORM (*all fields are required)</h4>
+
+          <form noValidate onSubmit={this.onSubmit}>
+            <div className="ui form" style={{ width: '235px'}}>
+              <label htmlFor="name" style={{ fontWeight: 'bold' }}>*Name </label>
+              <span className="red-text">{errors.name}</span>
               <br />
+              <input
+                onChange={this.onChange}
+                value={this.state.name}
+                error={errors.name}
+                id="name"
+                type="text"
+                className={classnames("", {
+                  invalid: errors.name
+                })}
+              />
+            </div>
 
+            <div className="ui form" style={{ width: '235px'}}>
+              <label htmlFor="email" style={{ fontWeight: 'bold' }}>*Email </label>
+              <span className="red-text">{errors.email}</span>
+              <br />
+              <input
+                onChange={this.onChange}
+                value={this.state.email}
+                error={errors.email}
+                id="email"
+                type="email"
+                className={classnames("", {
+                  invalid: errors.email
+                })}
+              />
+            </div>
+
+            <div className="ui form" style={{ width: '235px'}}>
+              <label htmlFor="password" style={{ fontWeight: 'bold' }}>*Password </label>
+              <span className="red-text">{errors.password}</span>
+              <br />
+              <input
+                onChange={this.onChange}
+                value={this.state.password}
+                error={errors.password}
+                id="password"
+                type="password"
+                className={classnames("", {
+                  invalid: errors.password
+                })}
+              />
+            </div>
+
+            <div className="ui form" style={{ width: '235px'}}>
+              <label htmlFor="password2" style={{ fontWeight: 'bold' }}>*Confirm Password </label>
+              <span className="red-text">{errors.password2}</span>
+              <br />
+              <input
+                onChange={this.onChange}
+                value={this.state.password2}
+                error={errors.password2}
+                id="password2"
+                type="password"
+                className={classnames("", {
+                  invalid: errors.password2
+                })}
+              />
+            </div>
+
+            <div className="ui form" style={{ width: '235px'}}>
+              <label htmlFor="emotion" style={{ fontWeight: 'bold' }}>*What kind of news do you like to read about? </label>
+              <span className="red-text">{errors.emotion}</span>
               <select>
-                <option value="volvo">Happy</option>
-                <option value="saab">Sad</option>
-                <option value="opel">Exciting</option>
-                <option value="audi">Angry</option>
+                <option value="0">Happy</option>
+                <option value="1">Sad</option>
+                <option value="2">Exciting</option>
+                <option value="3">Angry</option>
               </select>
+            </div>
 
-              <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-                <button
-                  style={{
-                    width: "150px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem"
-                  }}
-                  type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                >
-                  Sign up
+            <div className="input-field col s12">
+              <button
+                style={{
+                  width: "235px",
+                  borderRadius: "3px",
+                  letterSpacing: "1.5px",
+                  marginTop: "1rem"
+                }}
+                type="submit"
+                className="fluid blue ui button"
+              >
+                Sign up
                 </button>
-              </div>
-            </form>
-          </div>
+            </div>
+            <hr/>
+            <h4>Already have an account? <Link to="/login">Log in</Link></h4>
+
+          </form>
         </div>
       </div>
     );
