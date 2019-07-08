@@ -1,6 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import Moment from 'react-moment';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../../actions/authActions";
 
 
 
@@ -59,12 +62,20 @@ class Home extends React.Component {
 
 	render() {
 		
+	const { user } = this.props.auth;
+
 		return (
 			<>
 				<div style={{ background: 'black' }}>
 					<div className='.ui.container'>
 						<div className='ui inverted vertical masthead center aligned segment'>
 							<hr />
+							<h4>
+              				<b>Hey there,</b> {user.name.split(" ")[0]}
+             				 <p className="flow-text grey-text text-darken-1">
+               				 We'll try to find happy articles for you!
+             				 </p>
+           					 </h4>
 							<h1>NEWS <i class="small newspaper outline icon"></i> GLEAN</h1>
 							<h2>The news your way, all the time!</h2>
 							<h2>Now you can filter the news by the topic you want.</h2>
@@ -130,5 +141,20 @@ class Home extends React.Component {
 	
 }
 
+Home.propTypes = {
+	logoutUser: PropTypes.func.isRequired,
+	auth: PropTypes.object.isRequired
+  };
 
-export default Home;
+
+  const mapStateToProps = state => ({
+	auth: state.auth
+  });
+  
+  export default connect(
+	mapStateToProps,
+	{ logoutUser }
+  )(Home);
+  
+
+//export default Home;
