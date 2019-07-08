@@ -20,8 +20,7 @@ const UserSchema = new Schema({
     default: Date.now
   },
   useremotion: {
-    type: String,
-    required: true
+    type: String
   }
 });
 
