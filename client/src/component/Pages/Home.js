@@ -19,6 +19,7 @@ class Home extends React.Component {
 		this.state = {
 			articles: [],
 			query: '',
+
 		}
 	}
 
@@ -112,7 +113,7 @@ class Home extends React.Component {
 
 									<div className='ui card' style={{ width: '100%', padding: '1px' }} >
 										<div className='content' style={{ background: 'linear-gradient(to left, white, wheat)', borderBottom: '1px solid grey' }}>
-											<div className='header'><h2>{article.title}</h2></div>
+											<div className='header'><h2>{article.title}</h2></div><h3 style={{ float: 'right'}}>PLACEHOLDER</h3>
 										</div>
 										<div className='content'>
 											<div class="ui sub header"><h5>Author ({article.author})</h5></div>
