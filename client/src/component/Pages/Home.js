@@ -24,17 +24,17 @@ class Home extends React.Component {
 	}
 
 	componentDidMount() {
-		
+
 	}
 
 	getArticles = e => {
-		
+
 		if (e) {
 			e.preventDefault();
 		}
 
 		if (this.state.query !== "") {
-			
+
 			axios.get(API_URL + "q=" + this.state.query + '&apiKey=' + process.env.REACT_APP_API_KEY)
 				.then((data) => {
 					console.log("HAEY!");
@@ -53,7 +53,7 @@ class Home extends React.Component {
 	};
 
 	handleInputChange = e => {
-		
+
 		this.setState({
 			query: e.target.value,
 		}
@@ -62,8 +62,8 @@ class Home extends React.Component {
 	}
 
 	render() {
-		
-	const { user } = this.props.auth;
+
+		const { user } = this.props.auth;
 
 		return (
 			<>
@@ -72,11 +72,11 @@ class Home extends React.Component {
 						<div className='ui inverted vertical masthead center aligned segment'>
 							<hr />
 							<h4>
-              				<b>Hey there,</b> {user.name.split(" ")[0]}
-             				 <p className="flow-text grey-text text-darken-1">
-               				 We'll try to find happy articles for you!
+								<b>Hey there,</b> {user.name.split(" ")[0]}
+								<p className="flow-text grey-text text-darken-1">
+									We'll try to find happy articles for you!
              				 </p>
-           					 </h4>
+							</h4>
 							<h1>NEWS <i class="small newspaper outline icon"></i> GLEAN</h1>
 							<h2>The news your way, all the time!</h2>
 							<h2>Now you can filter the news by the topic you want.</h2>
@@ -113,7 +113,9 @@ class Home extends React.Component {
 
 									<div className='ui card' style={{ width: '100%', padding: '1px' }} >
 										<div className='content' style={{ background: 'linear-gradient(to left, white, wheat)', borderBottom: '1px solid grey' }}>
-											<div className='header'><h2>{article.title}</h2></div><h3 style={{ float: 'right'}}>PLACEHOLDER</h3>
+
+											<div className='header'><h2>{article.title}</h2></div><h3 style={{ float: 'right' }}>PLACEHOLDER</h3>
+
 										</div>
 										<div className='content'>
 											<div class="ui sub header"><h5>Author ({article.author})</h5></div>
@@ -139,23 +141,23 @@ class Home extends React.Component {
 			</>
 		);
 	}
-	
+
 }
 
 Home.propTypes = {
 	logoutUser: PropTypes.func.isRequired,
 	auth: PropTypes.object.isRequired
-  };
+};
 
 
-  const mapStateToProps = state => ({
+const mapStateToProps = state => ({
 	auth: state.auth
-  });
-  
-  export default connect(
+});
+
+export default connect(
 	mapStateToProps,
 	{ logoutUser }
-  )(Home);
-  
+)(Home);
+
 
 //export default Home;
