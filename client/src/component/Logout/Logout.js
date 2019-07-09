@@ -13,6 +13,7 @@ class Logout extends Component {
     const { user } = this.props.auth;
 
     return (
+      <div>
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="landing-copy col s12 center-align">
@@ -31,6 +32,7 @@ class Logout extends Component {
             </button>
           </div>
         </div>
+      </div>
       </div>
     );
   }
