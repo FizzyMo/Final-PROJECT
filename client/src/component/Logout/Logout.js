@@ -14,26 +14,66 @@ class Logout extends Component {
 
     return (
       <div>
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-          <div className="landing-copy col s12 center-align">
-            
-            <button
-              style={{
-                width: "150px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem"
-              }}
-              onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-            >
-              Logout
-            </button>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div class="ui placeholder segment" style={{background: 'linear-gradient(to top, lightgrey, wheat)'}}>
+          <div class="ui two column stackable center aligned grid">
+            <div class="ui vertical divider">Choose</div>
+            <div class="middle aligned row">
+
+              <div class="column">
+                <div class="ui icon header">
+                  <i class="sign out alternate icon"></i>
+                  Log out of News Glean
+                </div>
+
+                <button
+                  style={{
+                    width: "150px",
+                    borderRadius: "3px",
+                    letterSpacing: "1.5px",
+                    marginTop: "1rem"
+                  }}
+                  onClick={this.onLogoutClick}
+                  className="fluid big ui black button"
+                >
+                  Logout
+              </button>
+              </div>
+
+              <div class="column">
+                <div class="ui icon header">
+                  <i class="world icon"></i>
+                  Return Home to Read Articles
+                </div>
+
+                <button
+                  style={{
+                    width: "150px",
+                    borderRadius: "3px",
+                    letterSpacing: "1.5px",
+                    marginTop: "1rem"
+                  }}
+                  className="fluid big ui black button"
+                >
+              <a class="item" href="/home" style={{color: 'white'}}>Home</a>
+              </button>
+
+              </div>
+
+            </div>
           </div>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       </div>
-      </div>
+
+
     );
   }
 }
