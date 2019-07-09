@@ -12,19 +12,25 @@ const c = API_URL + '&apiKey=' + process.env.REACT_APP_API_KEY;
 
 class Home extends React.Component {
 
+	
 
 	constructor(props) {
 		super(props);
 		this.getArticles = this.getArticles.bind(this);
+		this.randomNumber = (Math.floor(Math.random() * 4));
 		this.state = {
 			articles: [],
 			query: '',
-
+			emotion: ['Happy', 'Sad', 'Exciting', 'Angry', 'Disgusting', 'Surprised', 'Fear']
 		}
 	}
 
 	componentDidMount() {
-
+	let number = (Math.floor(Math.random() * 4));
+    
+    let emotion = this.state.emotion[number];
+    console.log(emotion);
+    //this.setState({content: emotion})
 	}
 
 	getArticles = e => {
@@ -42,6 +48,7 @@ class Home extends React.Component {
 					this.setState({
 						articles: data.data.articles
 					})
+					
 				})
 
 				.catch((err) => {
@@ -63,7 +70,10 @@ class Home extends React.Component {
 
 	render() {
 
+		const randomEmotion =  this.state.emotion;
+		console.log(randomEmotion);
 		const { user } = this.props.auth;
+		var test = this.randomNumber;
 
 		return (
 			<>
@@ -74,7 +84,7 @@ class Home extends React.Component {
 							<h4>
 								<b>Hey there,</b> {user.name.split(" ")[0]}
 								<p className="flow-text grey-text text-darken-1">
-									We'll try to find happy articles for you!
+									We'll try to find {randomEmotion[0]} articles for you!
              				 </p>
 							</h4>
 							<h1>NEWS <i class="small newspaper outline icon"></i> GLEAN</h1>
@@ -114,7 +124,7 @@ class Home extends React.Component {
 									<div className='ui card' style={{ width: '100%', padding: '1px' }} >
 										<div className='content' style={{ background: 'linear-gradient(to left, white, wheat)', borderBottom: '1px solid grey' }}>
 
-											<div className='header'><h2>{article.title}</h2></div><h3 style={{ float: 'right' }}>PLACEHOLDER</h3>
+											<div className='header'><h2>{article.title}</h2></div><h3 style={{ float: 'right' }}>{randomEmotion[index%7]}</h3>
 
 										</div>
 										<div className='content'>
