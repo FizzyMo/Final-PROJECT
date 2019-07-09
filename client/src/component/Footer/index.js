@@ -12,7 +12,7 @@ function Footer() {
                 <a className="ui yellow button" href='' target='blank'>Isamar</a>
                 <button className="ui github button" style= {{ float: 'right'}}>
                     <i class="github icon"></i>
-                    Git Hub | Copyright 2019 | Project Badass
+                    Git Hub | Copyright 2019 | Project Badass News
             </button>
             </div>
         </div>
