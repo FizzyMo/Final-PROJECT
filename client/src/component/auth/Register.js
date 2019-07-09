@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
+import background from "./images/background.jpeg"
 
 class Register extends Component {
   constructor() {
@@ -57,7 +58,7 @@ class Register extends Component {
     return (
       <div className="ui raised very padded text container segment" style={{ background: 'linear-gradient(to left, white, wheat' }}>
 
-        <h2><i class="users icon"></i> Please regsiter for a News Glean account and login</h2>
+        <h2><i class="large users icon"></i> Please regsiter for a News Glean account and login.</h2>
         <hr />
 
         <div style={{ paddingLeft: '11.250px' }}>
@@ -153,9 +154,10 @@ class Register extends Component {
                 Sign up
                 </button>
             </div>
-            <hr/>
-            <h4>Already have an account? <Link to="/login">Log in</Link></h4>
+            <hr />
 
+            <h4>Already have an account? <Link to="/login">Log in</Link></h4>
+          
           </form>
         </div>
       </div>
