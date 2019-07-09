@@ -62,14 +62,14 @@ class App extends Component {
       <Provider store={store}>
    <Router>
       <div className='ui inverted vertical masthead left aligned segment' >
-        <div className="ui compact menu" style={{ backgroundColor: 'wheat' }}>
+        <div className="ui compact menu" style={{ backgroundColor: 'wheat', marginLeft: '1px' }}>
 
           <div className="header item">
             <Link to="/home"><i class="home icon" ></i>Home</Link>
           </div>
 
           <a className="item">
-            <Link to="/home"><i class="refresh icon" onClick= {this._refreshPage}></i>Refresh Page</Link>
+            <Link to="/home"><i class="refresh icon" onClick= {this._refreshPage}></i>Refresh </Link>
           </a>
 
           <a className="item">
