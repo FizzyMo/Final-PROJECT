@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/passportpractice20");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/FinalMongo2");
 
 // Passport middleware
 app.use(passport.initialize());

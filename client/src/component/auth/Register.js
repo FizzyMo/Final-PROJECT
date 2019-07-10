@@ -131,11 +131,17 @@ class Register extends Component {
             <div className="ui form" style={{ width: '235px'}}>
               <label htmlFor="emotion" style={{ fontWeight: 'bold' }}>*What kind of news do you like to read about? </label>
               <span className="red-text">{errors.emotion}</span>
-              <select>
-                <option value="0">Happy</option>
-                <option value="1">Sad</option>
-                <option value="2">Exciting</option>
-                <option value="3">Angry</option>
+              <select 
+              onChange={this.onChange}
+              value={this.state.emotion}
+              error={errors.emotion}
+              id="emotion"
+              >
+                <option value="random">(select one)</option>
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="exciting">Exciting</option>
+                <option value="angry">Angry</option>
               </select>
             </div>
 

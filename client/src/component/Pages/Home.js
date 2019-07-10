@@ -24,7 +24,7 @@ class Home extends React.Component {
   componentDidMount() {
     let number = (Math.floor(Math.random() * 4));
     let emotion = this.state.emotion[number];
-    console.log(emotion);
+
     //this.setState({content: emotion})
   }
 
@@ -64,8 +64,9 @@ class Home extends React.Component {
   render() {
 
     const randomEmotion = this.state.emotion;
-    console.log(randomEmotion);
-    const { user } = this.props.auth;
+	const { user } = this.props.auth;
+	console.log(this.props.auth);
+	console.log( user );
     var test = this.randomNumber;
 
     return (
@@ -73,7 +74,7 @@ class Home extends React.Component {
 
         {/* Welcome message */}
         <h5 style={{ letterSpacing: '1px' }}>
-          Hey there, {user.name.split(" ")[0]}! We'll try to find {randomEmotion[0]} news articles for you.
+          Hey there, {user.name.split(" ")[0]}! We'll try to find {user.emotion} news articles for you.
 				</h5>
 
         {/* Masthead and Search Field */}
