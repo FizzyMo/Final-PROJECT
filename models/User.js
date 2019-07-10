@@ -19,8 +19,9 @@ const UserSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  useremotion: {
-    type: String
+  emotion: {
+    type: String,
+    required: true
   }
 });
 

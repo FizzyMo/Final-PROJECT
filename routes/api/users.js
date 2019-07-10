@@ -26,16 +26,18 @@ router.post("/register", (req, res) => {
   }
 
   User.findOne({ email: req.body.email }).then(user => {
+   
     if (user) {
       return res.status(400).json({ email: "Email already exists" });
     } else {
+
       const newUser = new User({
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
-        useremotion: req.body.useremotion
+        useremotion: req.body.useremotion,
+        emotion: req.body.emotion
       });
-
       // Hash password before saving in database
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
@@ -81,7 +83,8 @@ router.post("/login", (req, res) => {
         // Create JWT Payload
         const payload = {
           id: user.id,
-          name: user.name
+          name: user.name,
+          emotion: user.emotion
         };
 
         // Sign token
