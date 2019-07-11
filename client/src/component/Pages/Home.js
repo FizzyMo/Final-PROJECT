@@ -17,7 +17,7 @@ class Home extends React.Component {
     this.state = {
       articles: [],
       query: '',
-      emotion: ['Happy', 'Sad', 'Exciting', 'Angry', 'Disgusting', 'Surprised', 'Fear']
+      emotion: ['Happy', 'Sad', 'Excitement', 'Anger', 'Disgust', 'Surprise', 'Fear']
     }
   }
 
