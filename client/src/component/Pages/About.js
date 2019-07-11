@@ -2,7 +2,7 @@ import React from "react";
 import Carisa from "../Pages/images/carisa.jpg"
 import Ryan from "../Pages/images/ryan.jpeg"
 import Max from "../Pages/images/max.jpg"
-import Isamar from "../Pages/images/isamar.jpg"
+import Isamar from "../Pages/images/isamar3.jpg"
 import background from "../Pages/images/aboutBackground.jpg"
 
 
@@ -25,16 +25,19 @@ function About() {
 
             <div className='ui container' style={{ border: '1px, solid grey' }}>
                 <br></br>
-                <h4>Welcome to News Glean.  This is a dynamic application that is designed to filter the news by the keywords of your choice.  It will literally change how you consume news.  You can even setup your own profile!</h4>
+                <h4>Welcome to News Glean!  This is an interactive application that is designed to filter the news by the keywords of your choice. You can even setup your very own account! It will literally change how you consume news.</h4>
 
-                <h4>News Glean is the brainchild of a dynamic team of web developers from the University of Arizona, Carisa Sanez-Videtto, Ryan Grady, and Max Jackson.  Carsia, Ryan, and Max are web developers in the making who will graduate from the university’s Coding Boot Camp in July, 2019.</h4>
+                <h4>News Glean is the brainchild of an energetic team of web developers from the University of Arizona, Carisa Sanez-Videtto, Ryan Grady, Isamar Valdivia, and Max Jackson.  Carsia, Ryan, Isamar, and Max are web developers in the making who will graduate from the university’s Coding Boot Camp in July, 2019.</h4>
 
-                <h4>The team has harnessed the power of a dynamic technology framework, React and it skyrockets into production with a Mongo database.  .</h4>
-                <h4>Finally, with help from ‘NewsApi.org’ our application will render a dynamic list of articles from a balanced journalistic source. </h4>
+                <h4>The team has harnessed the power of a dynamic technology framework, React, and the application skyrockets into production with a Mongo database and an Express server.</h4>
+
+                <h4>Finally, with help from ‘NewsApi.org’ our application will render a dynamic list of articles from a list of balanced journalistic sources. </h4>
 
                 <h4>News Glean utilizes a user-friendly front end design that is modern, sleek and mobile friendly.</h4>
-                <h4>The styling package of Semantic makes this possible due to it's </h4>
-                <h4>Semantic UI treats words and classes as exchangeable concepts. Classes use syntax from natural languages like noun/modifier relationships, word order, to link concepts intuitively.</h4>
+
+                <h4>The styling package of Semantic makes this possible due to its mobile-friendly ease of use.  Semantic treats words and classes as exchangeable concepts. Classes use syntax from natural languages like noun/modifier relationships, word order, to link concepts intuitively.</h4>
+
+                <h4>News Glean, dynamic news filtering for today's world!</h4>
                 <br />
             </div>
 
@@ -55,16 +58,16 @@ function About() {
                                 <h4>Back End Development Team</h4>
                             </div>
                             <div class="description">
-                                PLACEHOLDER
+                                During this project I handled Semantic, React.js and the News API for our site.
                             </div>
                         </div>
                         <div class="extra content">
                             <span class="right floated">
-                                PLACEHOLDER
+                                (520)278-4581
                         </span>
                             <span>
-                                <i class="user icon"></i>
-                                PLACEHOLDER
+                              
+                                carisasaenz@gmail.com
                         </span>
                         </div>
                     </div>
@@ -78,16 +81,16 @@ function About() {
                                 <h4>Back End Development Team</h4>
                             </div>
                             <div class="description">
-                                PLACEHOLDER
+                                I focused on the backend of the website by using Express, Mongo, Node, and Passport JS. 
                             </div>
                         </div>
                         <div class="extra content">
                             <span class="right floated">
-                                PLACEHOLDER
+                                (480) 278-3086
                             </span>
                             <span>
-                                <i class="user icon"></i>
-                                PLACEHOLDER
+                             
+                                ryangrady250@gmail.com
                         </span>
                         </div>
                     </div>
@@ -101,16 +104,15 @@ function About() {
                                 <h4>Front End Development Team</h4>
                             </div>
                             <div class="description">
-                                PLACEHOLDER
+                            I worked as the front end design lead to develop a responsive and intuitive user experience via Semantic UI and consulted on use the overall logic and functionality of the application.
                             </div>
                         </div>
                         <div class="extra content">
                             <span class="right floated">
-                                PLACEHOLDER
+                            (520) 260-1294
                         </span>
                             <span>
-                                <i class="user icon"></i>
-                                PLACEHOLDER
+                            maxj@email.arizona.edu
                         </span>
                         </div>
                     </div>
@@ -124,16 +126,15 @@ function About() {
                                 <h4>Front End Development Team</h4>
                             </div>
                             <div class="description">
-                                PLACEHOLDER
+                                I served as an independent contributer to the project by offering insight into various project matters.
                             </div>
                         </div>
                         <div class="extra content">
                             <span class="right floated">
-                                PLACEHOLDER
+                              
                         </span>
                             <span>
-                                <i class="user icon"></i>
-                                PLACEHOLDER
+                            isamarvaldivia21@gmail.com
                         </span>
                         </div>
                     </div>
