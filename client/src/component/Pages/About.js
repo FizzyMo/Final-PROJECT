@@ -10,7 +10,7 @@ import background from "../Pages/images/aboutBackground.jpg"
 function About() {
     return (
         <div>
-            <br/>
+            <br />
             <div style={{ textAlign: 'center', backgroundImage: `url(${background})` }} class="ten wide column">
                 <br />
                 <br />
@@ -66,7 +66,7 @@ function About() {
                                 (520)278-4581
                         </span>
                             <span>
-                              
+
                                 carisasaenz@gmail.com
                         </span>
                         </div>
@@ -81,7 +81,7 @@ function About() {
                                 <h4>Back End Development Team</h4>
                             </div>
                             <div class="description">
-                                I focused on the backend of the website by using Express, Mongo, Node, and Passport JS. 
+                                I focused on the backend of the website by using Express, Mongo, Node, and Passport JS.
                             </div>
                         </div>
                         <div class="extra content">
@@ -89,7 +89,7 @@ function About() {
                                 (480) 278-3086
                             </span>
                             <span>
-                             
+
                                 ryangrady250@gmail.com
                         </span>
                         </div>
@@ -104,15 +104,15 @@ function About() {
                                 <h4>Front End Development Team</h4>
                             </div>
                             <div class="description">
-                            I worked as the front end design lead to develop a responsive and intuitive user experience via Semantic UI and consulted on use the overall logic and functionality of the application.
+                                I worked as the front end design lead to develop a responsive and intuitive user experience via Semantic UI and consulted on use the overall logic and functionality of the application.
                             </div>
                         </div>
                         <div class="extra content">
                             <span class="right floated">
-                            (520) 260-1294
+                                (520) 260-1294
                         </span>
                             <span>
-                            maxj@email.arizona.edu
+                                maxj@email.arizona.edu
                         </span>
                         </div>
                     </div>
@@ -131,10 +131,10 @@ function About() {
                         </div>
                         <div class="extra content">
                             <span class="right floated">
-                              
-                        </span>
+
+                            </span>
                             <span>
-                            isamarvaldivia21@gmail.com
+                                isamarvaldivia21@gmail.com
                         </span>
                         </div>
                     </div>
@@ -146,7 +146,7 @@ function About() {
             {/* Video Content */}
             <h2 style={{ textAlign: 'center' }}>News Glean Demonstration</h2>
             <div className='card' style={{ textAlign: 'center', padding: '10px', backgroundColor: 'wheat' }}>
-                <iframe width="360" height="215" src="https://www.youtube.com/embed/T4FRqqVzNsw" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen='yes'></iframe>
+            <iframe width="360" height="215" src="https://www.youtube.com/embed/GXJtbQW0JeI" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen='yes'></iframe>
             </div>
 
         </div>
