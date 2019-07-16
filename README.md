@@ -1,3 +1,5 @@
+Here is a video walk through of the app
+[Click Here](https://www.youtube.com/watch?v=GXJtbQW0JeI&feature=youtu.be)
 # Create React Express App
 
 ## About This Boilerplate
