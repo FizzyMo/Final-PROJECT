@@ -1,3 +1,10 @@
+# News Glean
+News Glean is an interactive React-powered application designed to filter news by keywords. We have harnessed the power of a dynamic technology framework, React. The application skyrockets into production with a Mongo database and an Express server. With help from ‘NewsApi.org’ our application renders a dynamic list of articles from a list of balanced journalistic sources. News Glean utilizes a user-friendly front end design that is modern, sleek and mobile friendly. You can even setup your very own account!
+
+Carisa Sanez-Videtto, Ryan Grady, Isamar Valdivia, and Max Jackson
+
+Here a walk through of our app
+[Click Here](https://www.youtube.com/watch?v=GXJtbQW0JeI&feature=youtu.be)
 # Create React Express App
 
 ## About This Boilerplate
